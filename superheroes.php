@@ -62,6 +62,25 @@ $superheroes = [
       "biography" => "Notably powerful, Wanda Maximoff has fought both against and with the Avengers, attempting to hone her abilities and do what she believes is right to help the world.",
   ], 
 ];
+<<<<<<< HEAD
+$search= $_POST['search'];
+
+if (!isset($search)  or empty($search)) {
+      foreach ($superheroes as $superhero){
+        echo '<ul><li>'.$superhero['alias'].'</li></ul>' ;   
+    
+    }
+} elseif (!empty($search)) {
+    foreach ($superheroes as $superhero){
+        if ($search ===$superhero['alias']){
+            echo '<h3>'.$search.'</h3>'."<h4><br> A.K.A ".$superhero['name'].'</h4>'."<br>".'<p>'.$superhero['biography'].'</p>';
+        }elseif($search===$superhero['name']){
+            echo '<h3>'.$search.'</h3>'."<h4><br> A.K.A ". $superhero['alias'].'</h4>'."<br>".'<p>'.$superhero['biography'].'</p>';
+        }
+       
+    }
+}
+=======
 
 ?>
 
@@ -70,3 +89,4 @@ $superheroes = [
   <li><?= $superhero['alias']; ?></li>
 <?php endforeach; ?>
 </ul>
+>>>>>>> 98f47d5071ef4d351795f664ba54e48a8b90d332
